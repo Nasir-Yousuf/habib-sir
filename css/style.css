@@ -685,9 +685,15 @@ ul {
   position: relative;
 }
 
+.contact-search-form-box form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .contact-search-form-box input {
   width: 100%;
-  padding: 18px 65px 18px 24px;
+  padding: 18px 24px 18px 65px;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.25);
   border-radius: 50px;
@@ -704,7 +710,7 @@ ul {
 
 .contact-search-form-box button {
   position: absolute;
-  right: 8px;
+  left: 8px;
   top: 50%;
   transform: translateY(-50%);
   width: 48px;

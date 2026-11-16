@@ -1,0 +1,2261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- ==========================================================================
+       HEAD & META CONFIGURATION
+       - Responsive viewport settings for mobile & retina screens
+       - Complete SEO metadata matching Bongo Tanbo Travels
+       ========================================================================== -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Discover Unique Travel Experiences | Bongo Tanbo Travels</title>
+    <meta
+      name="description"
+      content="Bongo Tanbo Travels is a Bangladesh-Japan joint venture travel agency offering tailor-made inbound, outbound, and cultural tours."
+    />
+    <meta name="theme-color" content="#809e40" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo.webp"
+      type="image/x-icon"
+    />
+
+    <!-- ==========================================================================
+       EXTERNAL CSS FRAMEWORKS & FONTS
+       1. Bootstrap 5.3.3 - Latest stable responsive grid & component framework
+       2. Font Awesome 6.5.1 - Scalable vector icons
+       3. Bootstrap Icons - Modern UI icon set
+       4. Google Web Fonts:
+          - Outfit & Nunito (Modern clean UI & headings)
+          - Playfair Display (Luxury serif for editorial headlines)
+          - Seaweed Script (Authentic flowing cursive accent)
+       ========================================================================== -->
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Font Awesome 6.5.1 Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Bootstrap Icons 1.11.3 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&family=Prompt:wght@400;600;700;900&family=Seaweed+Script&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Stylesheet (Pixel-perfect Bongo Tanbo theme styling) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ==========================================================================
+       HEADER SECTION
+       Consists of:
+       A) Top Information Bar (Email, Animated dual-office address ticker, Socials, Lang)
+       B) Sticky Main Navigation (Logo, Mega-menu links, Book Now CTA, Login, Search)
+       ========================================================================== -->
+    <header class="header-section">
+      <!-- ------------------------------------------------------------------------
+         A) HEADER TOP BAR
+         Bootstrap utilities used:
+         - container-fluid px-lg-5: Expands across full screen width with generous gutters
+         - d-flex justify-content-between: Pushes contact to left and tools to right
+         - d-none d-md-flex: Hides secondary info on narrow phones to preserve space
+    ------------------------------------------------------------------------- -->
+      <div class="header-top-section">
+        <div class="container-fluid px-lg-5">
+          <div class="header-top-wrapper">
+            <!-- Left Info: Email & Animated Address Ticker -->
+            <ul class="top-left d-flex align-items-center">
+              <!-- Email Contact -->
+              <li class="d-flex align-items-center">
+                <i class="far fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:bongotanbo@gmail.com" title="Email us"
+                  >bongotanbo@gmail.com</a
+                >
+              </li>
+
+              <!-- Fixed Address in Top Bar -->
+              <li class="d-none d-lg-flex align-items-center">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <span class="header-address"
+                  >Fukuoka Ken Fukuoka City Chuo-ku-Kego 2-9-10-201 Japan |
+                  House No. 6 Road No. 8 Sector 11 Uttara, Dhaka 1230</span
+                >
+              </li>
+            </ul>
+
+            <!-- Right Info: Social Links & Language Switcher -->
+            <div class="header-top-right">
+              <!-- Social Media Icon Buttons -->
+              <div class="social-icon">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61590056545286"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/bongotanbo.1952991"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://wa.me/+8801577509112"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="WhatsApp"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+
+              <!-- Language Switcher Dropdown (Bootstrap 5 Dropdown) -->
+              <div class="language-dropdown dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="dropdown-toggle d-flex align-items-center gap-2"
+                  id="langDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-globe"></i>
+                  <span>English</span>
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end shadow-sm"
+                  aria-labelledby="langDropdown"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="#"
+                    >
+                      <img
+                        src="assets/images/flag-en.avif"
+                        alt="EN"
+                        width="18"
+                        height="12"
+                      />
+                      English
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="#"
+                    >
+                      <img
+                        src="assets/images/flag-bd.png"
+                        alt="BD"
+                        width="18"
+                      />
+                      বাংলা
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ------------------------------------------------------------------------
+         B) MAIN NAVIGATION BAR (STICKY NAVBAR)
+         Pins to top on scroll via JavaScript class .is-sticky
+    ------------------------------------------------------------------------- -->
+      <div class="header-main-nav" id="headerNav">
+        <div class="container-fluid px-lg-5">
+          <div class="mega-menu-wrapper">
+            <div class="header-main">
+              <!-- Brand Logo & Company Title -->
+              <div class="header-left">
+                <a
+                  href="index.html"
+                  class="header-logo d-flex align-items-center gap-2"
+                  title="Bongo Tanbo Travels Home"
+                >
+                  <img
+                    src="assets/images/logo.webp"
+                    alt="Bongo Tanbo Travels Logo"
+                  />
+                  <h3 class="header-brand-title d-none d-sm-inline">
+                    Bongo Tanbo Travels
+                  </h3>
+                </a>
+              </div>
+
+              <!-- Desktop Navigation Menu Links -->
+              <div class="main-menu d-none d-xl-block">
+                <nav aria-label="Main Navigation">
+                  <ul>
+                    <!-- Home Link (Active) -->
+                    <li class="active">
+                      <a href="index.html"><span>Home</span></a>
+                    </li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="has-dropdown">
+                      <a href="#">
+                        <span>About Us</span>
+                        <i class="fas fa-chevron-down"></i>
+                      </a>
+                      <ul class="submenu shadow-lg">
+                        <li><a href="#about-section">About Bongo Tanbo</a></li>
+                        <li>
+                          <a href="#riverine-section">About Bangladesh</a>
+                        </li>
+                        <li><a href="#choose-us">About Partners</a></li>
+                        <li><a href="#footer">FAQ</a></li>
+                      </ul>
+                    </li>
+
+                    <!-- Services Dropdown -->
+                    <li class="has-dropdown">
+                      <a href="#">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down"></i>
+                      </a>
+                      <ul class="submenu shadow-lg">
+                        <li>
+                          <a href="#tour-packages"
+                            >Air Ticketing &amp; Flight Booking</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#tour-packages"
+                            >Logistics &amp; Transportation</a
+                          >
+                        </li>
+                        <li><a href="#tour-packages">Travel Insurance</a></li>
+                        <li><a href="#tour-packages">Visa Assistance</a></li>
+                        <li><a href="#tour-packages">Visa Processing</a></li>
+                        <li><a href="#tour-packages">Resort Stays</a></li>
+                      </ul>
+                    </li>
+
+                    <!-- Tour Packages Dropdown -->
+                    <li class="has-dropdown">
+                      <a href="#tour-packages">
+                        <span>Tour Packages</span>
+                        <i class="fas fa-chevron-down"></i>
+                      </a>
+                      <ul class="submenu shadow-lg">
+                        <li>
+                          <a href="#tour-packages">Inbound Tour Packages</a>
+                        </li>
+                        <li>
+                          <a href="#tour-packages">Outbound Tour Packages</a>
+                        </li>
+                        <li>
+                          <a href="#tour-packages">Domestic Tour Packages</a>
+                        </li>
+                        <li>
+                          <a href="#tour-packages">Specialized Tour Package</a>
+                        </li>
+                        <li>
+                          <a href="#tour-packages">Bird Watching Tours</a>
+                        </li>
+                        <li><a href="#tour-packages">Trekking Packages</a></li>
+                        <li><a href="#tour-packages">Documentary Tours</a></li>
+                        <li><a href="#tour-packages">Photography Tours</a></li>
+                        <li><a href="#tour-packages">Festival Packages</a></li>
+                        <li><a href="#tour-packages">Ancestral Tours</a></li>
+                        <li><a href="#tour-packages">Family Packages</a></li>
+                        <li>
+                          <a href="#top-destinations">Tailor-made Packages</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <!-- Travel Blog Link -->
+                    <li>
+                      <a href="#blog-section"><span>Travel Blog</span></a>
+                    </li>
+
+                    <!-- Archive Dropdown -->
+                    <li class="has-dropdown">
+                      <a href="#popular-section">
+                        <span>Archive</span>
+                        <i class="fas fa-chevron-down"></i>
+                      </a>
+                      <ul class="submenu shadow-lg">
+                        <li><a href="#popular-section">Gallery</a></li>
+                      </ul>
+                    </li>
+
+                    <!-- Contact Link -->
+                    <li>
+                      <a href="#footer"><span>Contact</span></a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <!-- Action Buttons (Book Now, Login, Search, Mobile Hamburger) -->
+              <div class="header-actions">
+                <!-- Book Now Primary Action Button -->
+                <a
+                  href="#heroBookingForm"
+                  class="book-btn"
+                  title="Book your tailored tour"
+                >
+                  <i class="far fa-calendar-check me-1"></i> Book Now
+                </a>
+
+                <!-- Login Secondary Action Button -->
+                <a
+                  href="javascript:void(0)"
+                  class="login-btn d-none d-sm-inline-flex"
+                  title="Customer Login"
+                >
+                  <i class="far fa-user me-1"></i> Login
+                </a>
+
+                <!-- Fullscreen Search Modal Trigger Icon Button -->
+                <button
+                  class="search-toggle"
+                  id="searchOpenBtn"
+                  aria-label="Open search modal"
+                  title="Search tours"
+                >
+                  <i class="fas fa-search"></i>
+                </button>
+
+                <!-- Mobile Hamburger Toggle Button (Shown on tablets and phones) -->
+                <button
+                  class="sidebar__toggle d-xl-none"
+                  id="mobileToggleBtn"
+                  aria-label="Toggle navigation drawer"
+                >
+                  <i class="fas fa-bars"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+       FULLSCREEN SEARCH MODAL OVERLAY
+       Dark backdrop with large search bar. Dismissible via × button or ESC key.
+       ========================================================================== -->
+    <div
+      class="header-search-bar"
+      id="searchModal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Search Dialog"
+    >
+      <button
+        class="search-close"
+        id="searchCloseBtn"
+        aria-label="Close search"
+      >
+        &times;
+      </button>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 text-center">
+            <div class="contact-search-form-box">
+              <form action="#tour-packages" method="GET">
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Search destinations, tours, packages..."
+                  autocomplete="off"
+                />
+                <button type="submit" aria-label="Submit search">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+              <p>
+                Type keywords and press Enter to search. Press Escape or Close
+                (×) to cancel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       OFFCANVAS MOBILE NAVIGATION DRAWER
+       Slide-out drawer containing logo, language, navigation, contacts, and socials.
+       ========================================================================== -->
+    <div class="mobile-offcanvas-overlay" id="mobileOverlay"></div>
+    <aside
+      class="mobile-offcanvas"
+      id="mobileOffcanvas"
+      aria-label="Mobile Navigation Drawer"
+    >
+      <!-- Top Row: Logo & Close Button -->
+      <div
+        class="d-flex justify-content-between align-items-center pb-3 mb-3 border-bottom"
+      >
+        <a href="index.html" class="d-flex align-items-center gap-2">
+          <img src="assets/images/logo.webp" alt="Logo" width="40" />
+          <span class="fw-bold text-dark fs-6">Bongo Tanbo</span>
+        </a>
+        <button
+          class="offcanvas-close-btn"
+          id="mobileCloseBtn"
+          aria-label="Close menu"
+        >
+          &times;
+        </button>
+      </div>
+
+      <!-- Mobile Nav Links with Accordions -->
+      <div class="mobile-nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#" class="mobile-dropdown-toggle">
+              About Us <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="mobile-submenu">
+              <li><a href="#about-section">About Bongo Tanbo</a></li>
+              <li><a href="#riverine-section">About Bangladesh</a></li>
+              <li><a href="#choose-us">About Partners</a></li>
+              <li><a href="#footer">FAQ</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-dropdown-toggle">
+              Services <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="mobile-submenu">
+              <li><a href="#tour-packages">Flight Booking</a></li>
+              <li><a href="#tour-packages">Logistics &amp; Transport</a></li>
+              <li><a href="#tour-packages">Travel Insurance</a></li>
+              <li><a href="#tour-packages">Visa Processing</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-dropdown-toggle">
+              Tour Packages <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="mobile-submenu">
+              <li><a href="#tour-packages">Inbound Tour Packages</a></li>
+              <li><a href="#tour-packages">Outbound Tour Packages</a></li>
+              <li><a href="#tour-packages">Domestic Tour Packages</a></li>
+              <li><a href="#tour-packages">Specialized Tour Package</a></li>
+              <li><a href="#top-destinations">Tailor-made Packages</a></li>
+            </ul>
+          </li>
+          <li><a href="#blog-section">Travel Blog</a></li>
+          <li><a href="#popular-section">Gallery</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Mobile Contact & Social Details -->
+      <div class="mt-4 pt-3 border-top">
+        <a
+          href="#heroBookingForm"
+          class="theme-btn w-100 justify-content-center mb-3"
+        >
+          Book Now <i class="far fa-calendar-check"></i>
+        </a>
+        <div class="d-flex flex-column gap-2 text-muted fs-7">
+          <div>
+            <i class="far fa-envelope text-success me-2"></i>
+            bongotanbo@gmail.com
+          </div>
+          <div><i class="fas fa-phone text-success me-2"></i> +88028991482</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ==========================================================================
+       SECTION 1: HERO SLIDER SECTION (STATIC IMAGES AS REQUESTED)
+       - Bootstrap 5 Carousel (`carousel slide carousel-fade`)
+       - Static images: Sundarbans, Tea Garden, Kaptai Lake, Cox's Bazar
+       - Airplane decorative animations
+       - Custom previous & next long arrow buttons
+       ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Custom Carousel Navigation Long Arrows (Bootstrap 5 Controls) -->
+      <div class="hero-slider-nav">
+        <button
+          class="slider-arrow-btn"
+          id="heroPrevBtn"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+          aria-label="Previous Slide"
+        >
+          <i class="fas fa-long-arrow-alt-left"></i>
+        </button>
+        <button
+          class="slider-arrow-btn"
+          id="heroNextBtn"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+          aria-label="Next Slide"
+        >
+          <i class="fas fa-long-arrow-alt-right"></i>
+        </button>
+      </div>
+
+      <!-- Bootstrap 5 Carousel Container -->
+      <div
+        id="heroCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="6000"
+      >
+        <!-- Carousel Indicators (Dots) -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <!-- SLIDE 1: THE SUNDARBANS (STATIC IMAGE) -->
+          <div class="carousel-item active">
+            <div
+              class="hero-slider-item"
+              style="
+                background-image: url(&quot;assets/images/hero-sundarbans.jpg&quot;);
+              "
+            >
+              <!-- Floating Animated Planes -->
+              <div class="plane-shape-1">
+                <img
+                  src="assets/images/plane-2.png"
+                  alt="Decorative airplane"
+                />
+              </div>
+              <div class="plane-shape-2">
+                <img
+                  src="assets/images/plane-3.png"
+                  alt="Decorative airplane"
+                />
+              </div>
+
+              <!-- Slide Content -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-10">
+                    <div class="hero-content">
+                      <span class="hero-badge">UNESCO World Heritage Site</span>
+                      <h1 class="hero-title">
+                        <span class="shape-text">The</span
+                        ><span>Sundarbans</span>
+                      </h1>
+                      <p class="hero-desc">
+                        Explore the world's largest mangrove forest, home of the
+                        majestic Royal Bengal Tiger, mystical waterways, and
+                        unspoiled wilderness.
+                      </p>
+                      <a href="#tour-packages" class="theme-btn">
+                        <span>Explore Tours</span>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 2: TEA GARDEN (STATIC IMAGE) -->
+          <div class="carousel-item">
+            <div
+              class="hero-slider-item"
+              style="
+                background-image: url(&quot;assets/images/hero-tea-garden.jpg&quot;);
+              "
+            >
+              <!-- Floating Animated Planes -->
+              <div class="plane-shape-1">
+                <img
+                  src="assets/images/plane-2.png"
+                  alt="Decorative airplane"
+                />
+              </div>
+              <div class="plane-shape-2">
+                <img
+                  src="assets/images/plane-3.png"
+                  alt="Decorative airplane"
+                />
+              </div>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-10">
+                    <div class="hero-content">
+                      <span class="hero-badge">Emerald Rolling Hills</span>
+                      <h1 class="hero-title">
+                        <span class="shape-text">Tea</span><span>Garden</span>
+                      </h1>
+                      <p class="hero-desc">
+                        Immerse yourself in Srimangal’s lush green rolling
+                        hills, aromatic estates, indigenous cultures, and
+                        tranquil rainforest sanctuaries.
+                      </p>
+                      <a href="#tour-packages" class="theme-btn">
+                        <span>Discover Sylhet</span>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 3: KAPTAI LAKE (STATIC IMAGE) -->
+          <div class="carousel-item">
+            <div
+              class="hero-slider-item"
+              style="
+                background-image: url(&quot;assets/images/hero-kaptai-lake.jpg&quot;);
+              "
+            >
+              <!-- Floating Animated Planes -->
+              <div class="plane-shape-1">
+                <img
+                  src="assets/images/plane-2.png"
+                  alt="Decorative airplane"
+                />
+              </div>
+              <div class="plane-shape-2">
+                <img
+                  src="assets/images/plane-3.png"
+                  alt="Decorative airplane"
+                />
+              </div>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-10">
+                    <div class="hero-content">
+                      <span class="hero-badge">Serene Hill Tracts</span>
+                      <h1 class="hero-title">
+                        <span class="shape-text">Kaptai</span><span>Lake</span>
+                      </h1>
+                      <p class="hero-desc">
+                        Sail through turquoise waters embraced by emerald peaks
+                        in Rangamati, witnessing vibrant tribal lifestyle and
+                        magical sunsets.
+                      </p>
+                      <a href="#tour-packages" class="theme-btn">
+                        <span>Plan Lake Tour</span>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 4: COX'S BAZAR (STATIC IMAGE) -->
+          <div class="carousel-item">
+            <div
+              class="hero-slider-item"
+              style="
+                background-image: url(&quot;assets/images/hero-coxs-bazar.jpg&quot;);
+              "
+            >
+              <!-- Floating Animated Planes -->
+              <div class="plane-shape-1">
+                <img
+                  src="assets/images/plane-2.png"
+                  alt="Decorative airplane"
+                />
+              </div>
+              <div class="plane-shape-2">
+                <img
+                  src="assets/images/plane-3.png"
+                  alt="Decorative airplane"
+                />
+              </div>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-10">
+                    <div class="hero-content">
+                      <span class="hero-badge">Longest Natural Sea Beach</span>
+                      <h1 class="hero-title">
+                        <span class="shape-text">Cox’s</span><span>Bazar</span>
+                      </h1>
+                      <p class="hero-desc">
+                        Feel the golden sand under your feet across 120
+                        uninterrupted kilometers of gentle waves, coastal
+                        seafood, and marine breezes.
+                      </p>
+                      <a href="#tour-packages" class="theme-btn">
+                        <span>Book Beach Escape</span>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       HERO BOOKING & SEARCH FILTER BAR (FLOATING OVER HERO)
+       Overlaps the hero bottom edge (-65px) with a clean rounded card.
+       Inputs: Destination, Duration, Departure Date, Time Slot, and Submit Button.
+       ========================================================================== -->
+    <div class="booking-filter-wrapper container" id="bookingFilter">
+      <form
+        id="heroBookingForm"
+        class="booking-filter-card"
+        action="#tour-packages"
+        method="GET"
+      >
+        <!-- Field 1: Destination -->
+        <div class="booking-col">
+          <div class="booking-icon">
+            <img
+              src="assets/images/icon-destination.webp"
+              alt="Destination icon"
+            />
+          </div>
+          <div class="booking-info">
+            <label for="filterDestination">Destination</label>
+            <select
+              id="filterDestination"
+              name="destination"
+              class="form-select border-0 p-0 shadow-none"
+            >
+              <option value="">Select Destination</option>
+              <option value="sundarbans">Sundarbans</option>
+              <option value="srimangal">Srimangal (Tea Garden)</option>
+              <option value="coxs-bazar">Cox's Bazar</option>
+              <option value="rangamati">Rangamati (Kaptai)</option>
+              <option value="bandarban">Bandarban</option>
+              <option value="saint-martins">Saint Martin's Island</option>
+              <option value="japan">Japan</option>
+              <option value="singapore">Singapore</option>
+              <option value="thailand">Thailand</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Field 2: Duration -->
+        <div class="booking-col">
+          <div class="booking-icon">
+            <img src="assets/images/icon-duration.webp" alt="Duration icon" />
+          </div>
+          <div class="booking-info">
+            <label for="filterDuration">Duration</label>
+            <select
+              id="filterDuration"
+              name="duration"
+              class="form-select border-0 p-0 shadow-none"
+            >
+              <option value="">Select Duration</option>
+              <option value="3-days-2-nights">3 Days 2 Nights</option>
+              <option value="5-days">5 Days</option>
+              <option value="7-days">7 Days / 6 Nights</option>
+              <option value="8-days">8 Days</option>
+              <option value="10-days">10 Days</option>
+              <option value="12-days">12 Days</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Field 3: Departure Date -->
+        <div class="booking-col">
+          <div class="booking-icon">
+            <img src="assets/images/icon-departure.webp" alt="Date icon" />
+          </div>
+          <div class="booking-info">
+            <label for="departureDatePicker">Departure Date</label>
+            <input
+              type="date"
+              id="departureDatePicker"
+              name="date"
+              class="form-control border-0 p-0 shadow-none"
+            />
+          </div>
+        </div>
+
+        <!-- Field 4: Time Slot -->
+        <div class="booking-col">
+          <div class="booking-icon">
+            <img src="assets/images/icon-slot.webp" alt="Time slot icon" />
+          </div>
+          <div class="booking-info">
+            <label for="filterSlot">Time Slot</label>
+            <select
+              id="filterSlot"
+              name="slot"
+              class="form-select border-0 p-0 shadow-none"
+            >
+              <option value="morning">Morning (09:00 AM)</option>
+              <option value="afternoon">Afternoon (02:00 PM)</option>
+              <option value="evening">Evening (06:00 PM)</option>
+              <option value="flexible" selected>Flexible Schedule</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Field 5: Submit Search Button -->
+        <div class="booking-btn-col">
+          <button type="submit" class="booking-submit-btn">
+            <span>Search</span> <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ==========================================================================
+       SECTION 2: BANGLADESH SHOWCASE ("A RIVERINE COUNTRY")
+       - Pattern watermark background
+       - Editorial typography: Playfair Display + Seaweed Script
+       - Key statistical highlights (147,570 km², 170M+ Population, Dhaka Capital)
+       - Feature tags and Read More CTA
+       ========================================================================== -->
+    <section class="bdt-intro-section" id="riverine-section">
+      <div class="container">
+        <div class="bdt-intro-inner">
+          <!-- Country Label Badge -->
+          <div class="bdt-intro-label">
+            <span class="bd-flag-icon"></span>
+            <span>Bangladesh</span>
+          </div>
+
+          <!-- Big Dual-Font Heading -->
+          <h2 class="bdt-intro-heading">
+            <span class="bdt-title-main">A Riverine</span>
+            <br />
+            <span class="bdt-title-cursive">Country</span>
+          </h2>
+
+          <!-- Descriptive Paragraph -->
+          <p class="bdt-intro-text">
+            Bangladesh, located in South Asia, is a beautiful riverine country
+            blessed with natural diversity and cultural richness. Surrounded by
+            India and Myanmar and bordered by the Bay of Bengal, it covers about
+            <b>147,570 square kilometers</b> and is home to over
+            <b>170 million people</b>. The capital, Dhaka, is a bustling hub of
+            business and culture. Bangladesh is known for its green landscape,
+            fertile plains, vibrant traditions, and friendly people.
+          </p>
+
+          <!-- 3 Feature Stat Cards -->
+          <div class="bdt-intro-stats">
+            <!-- Stat 1: Total Area -->
+            <div class="bdt-intro-stat-card">
+              <div class="bdt-intro-stat-icon">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <div>
+                <div class="bdt-intro-stat-val">147,570 km²</div>
+                <div class="bdt-intro-stat-lbl">Total area</div>
+              </div>
+            </div>
+
+            <!-- Stat 2: Population -->
+            <div class="bdt-intro-stat-card">
+              <div class="bdt-intro-stat-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div>
+                <div class="bdt-intro-stat-val">170 Million+</div>
+                <div class="bdt-intro-stat-lbl">Population</div>
+              </div>
+            </div>
+
+            <!-- Stat 3: Capital City -->
+            <div class="bdt-intro-stat-card">
+              <div class="bdt-intro-stat-icon">
+                <i class="fas fa-city"></i>
+              </div>
+              <div>
+                <div class="bdt-intro-stat-val">Dhaka</div>
+                <div class="bdt-intro-stat-lbl">Capital city</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Tags & Read More Action -->
+          <div class="bdt-intro-bottom">
+            <div class="bdt-intro-tags">
+              <span class="bdt-intro-tag">Green Landscape</span>
+              <span class="bdt-intro-tag">Fertile Plains</span>
+              <span class="bdt-intro-tag">Bay of Bengal</span>
+              <span class="bdt-intro-tag">Vibrant Culture</span>
+              <span class="bdt-intro-tag">Friendly People</span>
+            </div>
+
+            <a href="#about-section" class="bdt-intro-btn">
+              <span>Read More</span> <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 3: ABOUT US SECTION
+       - Left: Rounded image collage with floating 12+ Years Experience badge
+       - Right: Bangladesh hospitality + Japanese precision details, checkmarks, CTA
+       ========================================================================== -->
+    <section class="about-section" id="about-section">
+      <!-- Floating background decorative shape -->
+      <div class="about-shape-bg d-none d-lg-block">
+        <img src="assets/images/about-shape.webp" alt="Background shape" />
+      </div>
+
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <!-- Left Column: Photo & Experience Counter Badge -->
+          <div class="col-lg-5">
+            <div class="about-image-wrapper">
+              <img
+                src="assets/images/about-img.webp"
+                alt="Bongo Tanbo Travels Journey"
+                class="main-about-img"
+              />
+
+              <!-- Floating 12+ Years of Experience Badge -->
+              <div class="about-experience-box">
+                <h2><span class="counter-value" data-count="12">12</span>+</h2>
+                <p>Years of Experience</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Story & Features -->
+          <div class="col-lg-7">
+            <div class="about-content-wrapper">
+              <!-- Section Subtitle & Title -->
+              <div class="section-title mb-3">
+                <span class="sub-title">About Us</span>
+                <h2>A Bridge of Warm Hospitality &amp; Precision</h2>
+              </div>
+
+              <p class="text-muted">
+                Bongo Tanbo Travels established as a
+                <b>Bangladesh–Japan joint venture</b> is a trusted name in the
+                travel and tourism industry. We combine global expertise,
+                cultural understanding, and professional excellence to deliver
+                seamless travel experiences across Bangladesh, Japan, and
+                beyond.
+              </p>
+
+              <!-- Tagline Quote Box -->
+              <div class="about-tagline-quote">
+                <h5>
+                  “Bangladeshi hospitality and Japanese precision make every
+                  journey a lifetime memory.”
+                </h5>
+              </div>
+
+              <!-- Features Checklist (Custom SVG Icons) -->
+              <div class="row">
+                <div class="col-sm-6">
+                  <ul class="about-features-list">
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M23.1 4.5L13.9 13.8C13.3 14.3 12.6 14.6 11.8 14.6C11.7 14.6 11.7 14.6 11.7 14.6C10.9 14.6 10.1 14.2 9.6 13.6L7 10.3C6.7 9.9 6.8 9.3 7.2 8.9C7.6 8.6 8.2 8.7 8.5 9.1L11.1 12.3C11.3 12.5 11.5 12.7 11.8 12.7C12 12.7 12.3 12.6 12.5 12.4L21.7 3.2C22.1 2.8 22.8 2.8 23.1 3.2C23.5 3.5 23.5 4.2 23.1 4.5Z"
+                          fill="#809e40"
+                        />
+                        <path
+                          d="M20.1 12.8C19.9 15.3 18.7 17.6 16.9 19.2C15.2 20.8 12.9 21.8 10.4 21.8C5 21.8 0.6 17.4 0.6 12C0.6 6.6 5 2.2 10.4 2.2C12.6 2.2 14.9 3.1 16.6 4.5C17 4.9 17.1 5.5 16.8 5.9C16.4 6.3 15.8 6.4 15.4 6C12.1 3.3 7.1 3.7 4.4 7C1.6 10.3 2 15.2 5.3 18C8.7 20.8 13.6 20.3 16.3 17C17.4 15.8 18 14.3 18.1 12.7C18.2 12.1 18.6 11.7 19.2 11.8C19.7 11.8 20.1 12.3 20.1 12.8Z"
+                          fill="#809e40"
+                        />
+                      </svg>
+                      <span>Trusted local travel experts</span>
+                    </li>
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M23.1 4.5L13.9 13.8C13.3 14.3 12.6 14.6 11.8 14.6C11.7 14.6 11.7 14.6 11.7 14.6C10.9 14.6 10.1 14.2 9.6 13.6L7 10.3C6.7 9.9 6.8 9.3 7.2 8.9C7.6 8.6 8.2 8.7 8.5 9.1L11.1 12.3C11.3 12.5 11.5 12.7 11.8 12.7C12 12.7 12.3 12.6 12.5 12.4L21.7 3.2C22.1 2.8 22.8 2.8 23.1 3.2C23.5 3.5 23.5 4.2 23.1 4.5Z"
+                          fill="#809e40"
+                        />
+                        <path
+                          d="M20.1 12.8C19.9 15.3 18.7 17.6 16.9 19.2C15.2 20.8 12.9 21.8 10.4 21.8C5 21.8 0.6 17.4 0.6 12C0.6 6.6 5 2.2 10.4 2.2C12.6 2.2 14.9 3.1 16.6 4.5C17 4.9 17.1 5.5 16.8 5.9C16.4 6.3 15.8 6.4 15.4 6C12.1 3.3 7.1 3.7 4.4 7C1.6 10.3 2 15.2 5.3 18C8.7 20.8 13.6 20.3 16.3 17C17.4 15.8 18 14.3 18.1 12.7C18.2 12.1 18.6 11.7 19.2 11.8C19.7 11.8 20.1 12.3 20.1 12.8Z"
+                          fill="#809e40"
+                        />
+                      </svg>
+                      <span>Many years of experience</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <ul class="about-features-list">
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M23.1 4.5L13.9 13.8C13.3 14.3 12.6 14.6 11.8 14.6C11.7 14.6 11.7 14.6 11.7 14.6C10.9 14.6 10.1 14.2 9.6 13.6L7 10.3C6.7 9.9 6.8 9.3 7.2 8.9C7.6 8.6 8.2 8.7 8.5 9.1L11.1 12.3C11.3 12.5 11.5 12.7 11.8 12.7C12 12.7 12.3 12.6 12.5 12.4L21.7 3.2C22.1 2.8 22.8 2.8 23.1 3.2C23.5 3.5 23.5 4.2 23.1 4.5Z"
+                          fill="#809e40"
+                        />
+                        <path
+                          d="M20.1 12.8C19.9 15.3 18.7 17.6 16.9 19.2C15.2 20.8 12.9 21.8 10.4 21.8C5 21.8 0.6 17.4 0.6 12C0.6 6.6 5 2.2 10.4 2.2C12.6 2.2 14.9 3.1 16.6 4.5C17 4.9 17.1 5.5 16.8 5.9C16.4 6.3 15.8 6.4 15.4 6C12.1 3.3 7.1 3.7 4.4 7C1.6 10.3 2 15.2 5.3 18C8.7 20.8 13.6 20.3 16.3 17C17.4 15.8 18 14.3 18.1 12.7C18.2 12.1 18.6 11.7 19.2 11.8C19.7 11.8 20.1 12.3 20.1 12.8Z"
+                          fill="#809e40"
+                        />
+                      </svg>
+                      <span>Flexible, hassle-free booking</span>
+                    </li>
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M23.1 4.5L13.9 13.8C13.3 14.3 12.6 14.6 11.8 14.6C11.7 14.6 11.7 14.6 11.7 14.6C10.9 14.6 10.1 14.2 9.6 13.6L7 10.3C6.7 9.9 6.8 9.3 7.2 8.9C7.6 8.6 8.2 8.7 8.5 9.1L11.1 12.3C11.3 12.5 11.5 12.7 11.8 12.7C12 12.7 12.3 12.6 12.5 12.4L21.7 3.2C22.1 2.8 22.8 2.8 23.1 3.2C23.5 3.5 23.5 4.2 23.1 4.5Z"
+                          fill="#809e40"
+                        />
+                        <path
+                          d="M20.1 12.8C19.9 15.3 18.7 17.6 16.9 19.2C15.2 20.8 12.9 21.8 10.4 21.8C5 21.8 0.6 17.4 0.6 12C0.6 6.6 5 2.2 10.4 2.2C12.6 2.2 14.9 3.1 16.6 4.5C17 4.9 17.1 5.5 16.8 5.9C16.4 6.3 15.8 6.4 15.4 6C12.1 3.3 7.1 3.7 4.4 7C1.6 10.3 2 15.2 5.3 18C8.7 20.8 13.6 20.3 16.3 17C17.4 15.8 18 14.3 18.1 12.7C18.2 12.1 18.6 11.7 19.2 11.8C19.7 11.8 20.1 12.3 20.1 12.8Z"
+                          fill="#809e40"
+                        />
+                      </svg>
+                      <span>Real-time itinerary updates</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Bottom CTA & Client Avatars -->
+              <div class="about-bottom-cta">
+                <a href="#tour-packages" class="theme-btn">
+                  <span>Read More</span>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
+
+                <div class="client-group">
+                  <img
+                    src="assets/images/client-avatars.webp"
+                    alt="Satisfied Travelers"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 4: WHY CHOOSE US
+       - Dark background with overlay (assets/images/bg-choose-us.webp)
+       - 6 Glassmorphism cards with numbered watermarks 01 through 06
+       - Responsive 3-column desktop layout (col-xl-4 col-md-6)
+       ========================================================================== -->
+    <section
+      class="choose-us-section-custom section-padding"
+      id="choose-us"
+      style="background-image: url(&quot;assets/images/bg-choose-us.webp&quot;)"
+    >
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-title-custom">
+          <span>Bongo Tanbo Travels</span>
+          <h2>Why Choose <span>Us</span>?</h2>
+          <p>
+            Because you deserve more than just a trip—you deserve an experience
+            that stays with you for a lifetime.
+          </p>
+        </div>
+
+        <!-- 6 Cards Grid -->
+        <div class="row g-4">
+          <!-- Card 01 -->
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="choose-card" data-number="01">
+              <div class="card-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h4>Experienced Travel Experts Who Care</h4>
+              <p>
+                Our passionate and highly skilled team goes beyond basic
+                planning. We pay attention to every detail, ensuring your
+                journey is smooth, personalized, and unforgettable.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="choose-card" data-number="02">
+              <div class="card-icon">
+                <i class="fas fa-globe-americas"></i>
+              </div>
+              <h4>A Trusted Global Network</h4>
+              <p>
+                With strong partnerships around the world, we guarantee
+                reliability, quality service, and seamless coordination—no
+                matter where you travel.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="choose-card" data-number="03">
+              <div class="card-icon">
+                <i class="fas fa-tags"></i>
+              </div>
+              <h4>Exceptional Value for Every Budget</h4>
+              <p>
+                We believe great travel should be accessible. That’s why we
+                offer premium services at competitive prices—giving you the best
+                without compromise.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="choose-card" data-number="04">
+              <div class="card-icon">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <h4>Tailor-Made Experiences</h4>
+              <p>
+                Your journey is unique—and it should feel that way. We design
+                customized itineraries that reflect your interests, preferences,
+                and dreams.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 05 -->
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="choose-card" data-number="05">
+              <div class="card-icon">
+                <i class="fas fa-hiking"></i>
+              </div>
+              <h4>Professional Guides Who Enrich Your Journey</h4>
+              <p>
+                Our knowledgeable and friendly guides don’t just show
+                destinations—they bring them to life with stories, insights, and
+                local expertise.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 06 -->
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="choose-card" data-number="06">
+              <div class="card-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h4>End-to-End Travel Support</h4>
+              <p>
+                Travel with confidence knowing we are always just a call away.
+                Anytime, anywhere—we’re here to support you at every single
+                step.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 5: OUR TOUR PACKAGES
+       - 8 Featured Tour Package Cards
+       - Thumbnail image zoom, duration pill, places count, title link
+       - Responsive grid: 4 columns on large screens, 2 on mobile
+       ========================================================================== -->
+    <section class="tour-section section-padding" id="tour-packages">
+      <div class="container-fluid px-lg-5">
+        <!-- Section Title -->
+        <div class="section-title text-center">
+          <span class="sub-title">Explore Best Offers</span>
+          <h2>Our Tour Packages</h2>
+        </div>
+
+        <!-- 8 Packages Grid -->
+        <div class="row g-4">
+          <!-- Package 1: Japan Standard Tour -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tour-box-items">
+              <div class="thumb">
+                <img
+                  src="assets/images/package-1.webp"
+                  alt="Japan Standard Tour Itinerary"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h4>
+                  <a href="javascript:void(0)">Japan Standard Tour Itinerary</a>
+                </h4>
+                <ul class="list">
+                  <li><i class="far fa-calendar"></i> 7 Days</li>
+                  <li><i class="far fa-flag"></i> 4 places</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 2: Singapore Tour -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tour-box-items">
+              <div class="thumb">
+                <img
+                  src="assets/images/package-2.jpg"
+                  alt="5 Days Singapore Standard Tour Package"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h4>
+                  <a href="javascript:void(0)"
+                    >5 Days Singapore Standard Tour Package</a
+                  >
+                </h4>
+                <ul class="list">
+                  <li><i class="far fa-calendar"></i> 5 Days</li>
+                  <li><i class="far fa-flag"></i> 3 places</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 3: Bangladesh Cultural Discovery -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tour-box-items">
+              <div class="thumb">
+                <img
+                  src="assets/images/package-3.jpg"
+                  alt="Bangladesh Cultural Discovery Tour Itinerary"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h4>
+                  <a href="javascript:void(0)"
+                    >Bangladesh Cultural Discovery Tour</a
+                  >
+                </h4>
+                <ul class="list">
+                  <li><i class="far fa-calendar"></i> 8 Days</li>
+                  <li><i class="far fa-flag"></i> 11 places</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 4: Shaktipeeth Pilgrimage -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tour-box-items">
+              <div class="thumb">
+                <img
+                  src="assets/images/package-4.jpg"
+                  alt="Bangladesh Shaktipeeth Pilgrimage Tour Package"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h4>
+                  <a href="javascript:void(0)"
+                    >Bangladesh Shaktipeeth Pilgrimage Tour</a
+                  >
+                </h4>
+                <ul class="list">
+                  <li><i class="far fa-calendar"></i> 7D / 6N</li>
+                  <li><i class="far fa-flag"></i> 10 places</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 5: 7 Days Bangladesh Standard Tour -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tour-box-items">
+              <div class="thumb">
+                <img
+                  src="assets/images/package-5.jpg"
+                  alt="7 Days Bangladesh Standard Tour"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h4>
+                  <a href="javascript:void(0)"
+                    >7 Days Bangladesh Standard Tour</a
+                  >
+                </h4>
+                <ul class="list">
+                  <li><i class="far fa-calendar"></i> 7 Days</li>
+                  <li><i class="far fa-flag"></i> 12 places</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 6: 10 Days Bangladesh Standard Tour -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tour-box-items">
+              <div class="thumb">
+                <img
+                  src="assets/images/package-6.jpg"
+                  alt="10 Days Bangladesh Standard Tour"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h4>
+                  <a href="javascript:void(0)"
+                    >10 Days Bangladesh Standard Tour</a
+                  >
+                </h4>
+                <ul class="list">
+                  <li><i class="far fa-calendar"></i> 10 Days</li>
+                  <li><i class="far fa-flag"></i> 13 places</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 7: 10 Days Bangladesh Discovery Tour -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tour-box-items">
+              <div class="thumb">
+                <img
+                  src="assets/images/package-7.jpg"
+                  alt="10 Days Bangladesh Discovery Tour"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h4>
+                  <a href="javascript:void(0)"
+                    >10 Days Bangladesh Discovery Tour</a
+                  >
+                </h4>
+                <ul class="list">
+                  <li><i class="far fa-calendar"></i> 10 Days</li>
+                  <li><i class="far fa-flag"></i> 13 places</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 8: 12 Days Village Culture, Archaeology & Heritage -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tour-box-items">
+              <div class="thumb">
+                <img
+                  src="assets/images/package-8.jpg"
+                  alt="12 Days Village Culture, Archaeology & Heritage Tour"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h4>
+                  <a href="javascript:void(0)"
+                    >12 Days Village Culture &amp; Heritage Tour</a
+                  >
+                </h4>
+                <ul class="list">
+                  <li><i class="far fa-calendar"></i> 12 Days</li>
+                  <li><i class="far fa-flag"></i> 7 places</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       PROMOTIONAL DEALS & DISCOUNT BANNERS
+       3 Visual callout cards with discount stickers and scenic backgrounds
+       ========================================================================== -->
+    <section
+      class="promo-deals-area"
+      style="background-image: url(&quot;assets/images/deal-bg.webp&quot;)"
+    >
+      <div class="container">
+        <div class="row g-4">
+          <!-- Deal 1 -->
+          <div class="col-xl-4 col-lg-6 col-md-6">
+            <div
+              class="tour-box-items-3"
+              style="
+                background-image: url(&quot;assets/images/deal-1.webp&quot;);
+              "
+            >
+              <div class="tour-content">
+                <h3>Explore <br />Destinations <br />Save More Every Trip</h3>
+              </div>
+              <div class="percent-image">
+                <img
+                  src="assets/images/badge-1.webp"
+                  alt="Special Discount Badge"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal 2 -->
+          <div class="col-xl-4 col-lg-6 col-md-6">
+            <div
+              class="tour-box-items-3"
+              style="
+                background-image: url(&quot;assets/images/deal-2.webp&quot;);
+              "
+            >
+              <div class="tour-content">
+                <h3>
+                  Plan Ahead, <br />Travel Smart <br />Save Big On Vacations
+                </h3>
+              </div>
+              <div class="percent-image">
+                <img
+                  src="assets/images/badge-2.webp"
+                  alt="Special Discount Badge"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal 3 -->
+          <div class="col-xl-4 col-lg-6 col-md-6">
+            <div
+              class="tour-box-items-3"
+              style="
+                background-image: url(&quot;assets/images/deal-3.webp&quot;);
+              "
+            >
+              <div class="tour-content">
+                <h3>Experience <br />The Best Trips <br />At Best Rates</h3>
+              </div>
+              <div class="percent-image">
+                <img
+                  src="assets/images/badge-3.webp"
+                  alt="Special Discount Badge"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 6: TOP DESTINATION PACKAGES & HIGHLIGHT CTA
+       - 11 Categories with custom icons
+       - Highlight CTA Banner ("Dream Trip Starts Here / Tailored Trips For You")
+       ========================================================================== -->
+    <section class="top-destination-section" id="top-destinations">
+      <div class="container">
+        <!-- Section Title Area with CTA button -->
+        <div class="section-title-area">
+          <div class="section-title mb-0">
+            <span class="sub-title">Our Top Destination Packages</span>
+            <h2>Inspiration For Future Travel</h2>
+            <p class="text-muted mt-2 mb-0">
+              Our curated destination passes save you more than individual
+              tickets for your tailored holiday experience.
+            </p>
+          </div>
+          <a href="#heroBookingForm" class="theme-btn theme-btn-2">
+            <span>Tailor-made Packages</span>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </a>
+        </div>
+
+        <!-- 11 Category Features Grid -->
+        <div class="row g-3">
+          <!-- 1: Specialized -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="destination-feature-box">
+              <div class="icon">
+                <img
+                  class="topCatImg"
+                  src="assets/images/cat-specialized.webp"
+                  alt="Specialized Tour Package"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h5>Specialized Tour Package</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2: Festival -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="destination-feature-box">
+              <div class="icon">
+                <img
+                  class="topCatImg"
+                  src="assets/images/cat-festival.webp"
+                  alt="Festival Packages"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h5>Festival Packages</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3: Ancestral -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="destination-feature-box">
+              <div class="icon">
+                <img
+                  class="topCatImg"
+                  src="assets/images/cat-ancestral.webp"
+                  alt="Ancestral Tours"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h5>Ancestral Tours</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4: Family -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="destination-feature-box">
+              <div class="icon">
+                <img
+                  class="topCatImg"
+                  src="assets/images/cat-family.webp"
+                  alt="Family Packages"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h5>Family Packages</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5: Trekking -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="destination-feature-box">
+              <div class="icon">
+                <img
+                  class="topCatImg"
+                  src="assets/images/cat-trekking.webp"
+                  alt="Trekking Packages"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h5>Trekking Packages</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6: Photography -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="destination-feature-box">
+              <div class="icon">
+                <img
+                  class="topCatImg"
+                  src="assets/images/cat-photography.webp"
+                  alt="Photography Tours"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h5>Photography Tours</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7: Documentary -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="destination-feature-box">
+              <div class="icon">
+                <img
+                  class="topCatImg"
+                  src="assets/images/cat-documentary.webp"
+                  alt="Documentary Tours"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h5>Documentary Tours</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8: Bird Watching -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="destination-feature-box">
+              <div class="icon">
+                <img
+                  class="topCatImg"
+                  src="assets/images/cat-bird.webp"
+                  alt="Bird Watching Tours"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h5>Bird Watching Tours</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9: Inbound -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="destination-feature-box">
+              <div class="icon">
+                <img
+                  class="topCatImg"
+                  src="assets/images/cat-inbound.webp"
+                  alt="Inbound Tour Packages"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h5>Inbound Tour Packages</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10: Outbound -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="destination-feature-box">
+              <div class="icon">
+                <img
+                  class="topCatImg"
+                  src="assets/images/cat-outbound.webp"
+                  alt="Outbound Tour Packages"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h5>Outbound Tour Packages</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11: Domestic -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="destination-feature-box">
+              <div class="icon">
+                <img
+                  class="topCatImg"
+                  src="assets/images/cat-domestic.webp"
+                  alt="Domestic Tour Packages"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <h5>Domestic Tour Packages</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Travel Highlight Banner (cta-wrapper-4) -->
+        <div
+          class="cta-wrapper-4"
+          style="background-image: url(&quot;assets/images/cta-bg.webp&quot;)"
+        >
+          <div class="section-title text-center mb-4">
+            <span class="sub-title text-white bg-dark bg-opacity-50"
+              >Travel Highlight</span
+            >
+            <h2>Dream Trip Starts Here <br />Tailored Trips For You</h2>
+          </div>
+
+          <a href="#heroBookingForm" class="theme-btn">
+            <span>Book Now</span> <i class="fas fa-long-arrow-alt-right"></i>
+          </a>
+
+          <!-- Floating Decorative Shapes -->
+          <div class="discount-shape">
+            <img src="assets/images/discount-shape.webp" alt="Discount Shape" />
+          </div>
+          <div class="bag-shape">
+            <img src="assets/images/bag-shape.webp" alt="Suitcase Shape" />
+          </div>
+          <div class="plane-shape">
+            <img src="assets/images/plane-shape.png" alt="Airplane Shape" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       POPULAR IN BANGLADESH (RECOMMENDATION COLLAGE)
+       - Beautiful layered collage of iconic Bangladesh landscapes
+       - Tag overlays (Waterfalls, Beach, Food, Green Tourism, Historical, Luxury)
+       - Hover zoom effects and titles
+       ========================================================================== -->
+    <section
+      class="government-style-area"
+      id="popular-section"
+      style="background-image: url(&quot;assets/images/gov-bg.webp&quot;)"
+    >
+      <div class="container text-center mb-4">
+        <div class="section-title mb-0">
+          <p class="gov-sub">Our Recommendations</p>
+          <h2 class="gov-main">Popular In Bangladesh</h2>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="gov-collage-wrapper">
+          <!-- Item 1: Waterfalls -->
+          <div class="gov-item item-1">
+            <a href="#tour-packages" class="gov-link">
+              <div class="gov-img-box">
+                <img
+                  src="assets/images/gov-waterfalls.webp"
+                  alt="Waterfalls in Bangladesh"
+                  loading="lazy"
+                />
+                <div class="gov-overlay"></div>
+                <div class="gov-content">
+                  <span class="gov-tag">Charming</span>
+                  <h3 class="gov-title">Waterfalls</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item 2: Beach (Centerpiece Above) -->
+          <div class="gov-item item-2">
+            <a href="#tour-packages" class="gov-link">
+              <div class="gov-img-box">
+                <img
+                  src="assets/images/gov-beach.webp"
+                  alt="Beach in Bangladesh"
+                  loading="lazy"
+                />
+                <div class="gov-overlay"></div>
+                <div class="gov-content">
+                  <span class="gov-tag">Beautiful</span>
+                  <h3 class="gov-title">Beach</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item 3: Food -->
+          <div class="gov-item item-3">
+            <a href="#tour-packages" class="gov-link">
+              <div class="gov-img-box">
+                <img
+                  src="assets/images/gov-food.webp"
+                  alt="Bangladeshi Cuisine"
+                  loading="lazy"
+                />
+                <div class="gov-overlay"></div>
+                <div class="gov-content">
+                  <span class="gov-tag">Tasty</span>
+                  <h3 class="gov-title">Food</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item 4: Green Tourism -->
+          <div class="gov-item item-4">
+            <a href="#tour-packages" class="gov-link">
+              <div class="gov-img-box">
+                <img
+                  src="assets/images/gov-green.webp"
+                  alt="Green Tourism"
+                  loading="lazy"
+                />
+                <div class="gov-overlay"></div>
+                <div class="gov-content">
+                  <span class="gov-tag">Attractive</span>
+                  <h3 class="gov-title">Green</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item 5: Historical (Centerpiece Below) -->
+          <div class="gov-item item-5">
+            <a href="#tour-packages" class="gov-link">
+              <div class="gov-img-box">
+                <img
+                  src="assets/images/gov-history.webp"
+                  alt="Historical Heritage"
+                  loading="lazy"
+                />
+                <div class="gov-overlay"></div>
+                <div class="gov-content">
+                  <span class="gov-tag">Heritage Tour</span>
+                  <h3 class="gov-title">Historical</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item 6: Luxury -->
+          <div class="gov-item item-6">
+            <a href="#tour-packages" class="gov-link">
+              <div class="gov-img-box">
+                <img
+                  src="assets/images/gov-luxury.webp"
+                  alt="Luxury Comfort"
+                  loading="lazy"
+                />
+                <div class="gov-overlay"></div>
+                <div class="gov-content">
+                  <span class="gov-tag">Luxury</span>
+                  <h3 class="gov-title">Comfort</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 7: LATEST TRAVEL INSIGHTS & BLOG
+       - 4 Travel Insight Cards
+       - Thumbnail, article title, summary snippet, and Read More button
+       ========================================================================== -->
+    <section
+      class="news-section section-padding"
+      id="blog-section"
+      style="background-image: url(&quot;assets/images/blog-bg.webp&quot;)"
+    >
+      <div class="container-fluid px-lg-5">
+        <!-- Section Title -->
+        <div class="section-title text-center">
+          <span class="sub-title">Latest Blog &amp; Experience</span>
+          <h2>Latest Travel Insights and<br />Destination Guides</h2>
+        </div>
+
+        <!-- 4 Blog Cards Grid -->
+        <div class="row g-4">
+          <!-- Post 1 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="news-card-items">
+              <div class="news-image">
+                <img
+                  src="assets/images/blog-1.webp"
+                  alt="Sundarbans Mangrove Forest"
+                  loading="lazy"
+                />
+              </div>
+              <div class="news-content">
+                <h3>
+                  <a href="javascript:void(0)"
+                    >The Sundarbans Mangrove Forest: A Global Treasure...</a
+                  >
+                </h3>
+                <p>
+                  Geographic Location of the Sundarbans: The Sundarbans is the
+                  world's largest continuous mangrove forest...
+                </p>
+                <a href="javascript:void(0)" class="theme-btn">
+                  <span>Read More</span>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="news-card-items">
+              <div class="news-image">
+                <img
+                  src="assets/images/blog-2.webp"
+                  alt="Seamless Journeys"
+                  loading="lazy"
+                />
+              </div>
+              <div class="news-content">
+                <h3>
+                  <a href="javascript:void(0)"
+                    >Discovering Seamless Journeys with Bongo Tanbo Travels</a
+                  >
+                </h3>
+                <p>
+                  Finding a travel agency that understands your unique
+                  wanderlust is like finding a hidden gem. If you...
+                </p>
+                <a href="javascript:void(0)" class="theme-btn">
+                  <span>Read More</span>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 3 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="news-card-items">
+              <div class="news-image">
+                <img
+                  src="assets/images/blog-3.webp"
+                  alt="Outstanding Service"
+                  loading="lazy"
+                />
+              </div>
+              <div class="news-content">
+                <h3>
+                  <a href="javascript:void(0)"
+                    >Outstanding Service Experience with Bongo Tanbo Travels</a
+                  >
+                </h3>
+                <p>
+                  “I am truly impressed by the level of service provided by
+                  Bongo Tanbo Travels.” From start to finish...
+                </p>
+                <a href="javascript:void(0)" class="theme-btn">
+                  <span>Read More</span>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="news-card-items">
+              <div class="news-image">
+                <img
+                  src="assets/images/blog-4.webp"
+                  alt="Effortless Journey"
+                  loading="lazy"
+                />
+              </div>
+              <div class="news-content">
+                <h3>
+                  <a href="javascript:void(0)"
+                    >An Effortless and Enjoyable Journey with Bongo Tanbo</a
+                  >
+                </h3>
+                <p>
+                  From the very first consultation, their team was incredibly
+                  friendly, responsive, and professional...
+                </p>
+                <a href="javascript:void(0)" class="theme-btn">
+                  <span>Read More</span>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       FOOTER SECTION
+       1. Col 1: BTB (Bangladesh Tourism Board) registration proof + Socials
+       2. Col 2: Quick Links (Travel Experiences, FAQ, Policies)
+       3. Col 3: Bangladesh Office (Uttara, Dhaka address, phone, whatsapp, email)
+       4. Col 4: Japan Office (Fukuoka City address, phone, mobile, email)
+       5. Footer Bottom: Copyright notice
+       ========================================================================== -->
+    <footer
+      class="footer-section"
+      id="footer"
+      style="background-image: url(&quot;assets/images/footer-bg.webp&quot;)"
+    >
+      <div class="container">
+        <div class="row g-4">
+          <!-- Column 1: BTB Registration Box & Socials -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="footer-widget-items">
+              <h3 class="footer-widget-title">Bangladesh Tourism Board</h3>
+
+              <!-- Official BTB Verification Box -->
+              <div class="btb-registration-box mt-3">
+                <a
+                  href="https://btbregistration.gov.bd/to-company-info/Nzc/bongo-tanbo-travels"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/images/btb-logo.png"
+                    alt="BTB Official Logo"
+                  />
+                </a>
+                <div>
+                  <span class="d-block text-danger fs-7 fw-semibold"
+                    >Registered by</span
+                  >
+                  <span class="d-block text-dark fw-bold fs-6"
+                    >Bangladesh Tourism Board (BTB)</span
+                  >
+                </div>
+              </div>
+
+              <!-- Social Media Handles -->
+              <div class="social-icon mt-4">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61590056545286"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/bongotanbo.1952991"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://wa.me/+8801577509112"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="WhatsApp"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-xl-2 col-lg-3 col-md-6">
+            <div class="footer-widget-items">
+              <h3 class="footer-widget-title">Quick Links</h3>
+              <ul class="list-items">
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="#blog-section">Travel Experiences</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="#choose-us">FAQ</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="javascript:void(0)">Privacy Policies</a>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <a href="javascript:void(0)">Terms And Conditions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Column 3: Bangladesh Office -->
+          <div class="col-xl-4 col-lg-5 col-md-6">
+            <div class="footer-widget-items">
+              <h3 class="footer-widget-title">Bangladesh Office</h3>
+              <div class="contact-info-items mt-3">
+                <!-- Address -->
+                <div class="contact-items d-flex align-items-start mb-3">
+                  <div class="footer-contact-icon me-3">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="content">
+                    <p class="footer-contact-text">
+                      Nipobon (First Floor) House No. 6 Road No. 8 Sector 11
+                      Uttara, Dhaka 1230.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-items d-flex align-items-center mb-2">
+                  <div class="footer-contact-icon-small me-3">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="content">
+                    <a href="tel:+88028991482" class="footer-contact-text"
+                      >+88028991482</a
+                    >
+                  </div>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-items d-flex align-items-center mb-2">
+                  <div class="footer-contact-icon-small me-3">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <div class="content">
+                    <a
+                      href="https://wa.me/8801577509112"
+                      class="footer-contact-text"
+                      >+8801612320995 | +8801577509112</a
+                    >
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-items d-flex align-items-center">
+                  <div class="footer-contact-icon-small me-3">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="content">
+                    <a
+                      href="mailto:bongotanbo@gmail.com"
+                      class="footer-contact-text"
+                      >bongotanbo@gmail.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 4: Japan Office -->
+          <div class="col-xl-3 col-lg-5 col-md-6">
+            <div class="footer-widget-items">
+              <h3 class="footer-widget-title">Japan Office</h3>
+              <div class="contact-info-items mt-3">
+                <!-- Address -->
+                <div class="contact-items d-flex align-items-start mb-3">
+                  <div class="footer-contact-icon me-3">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="content">
+                    <p class="footer-contact-text">
+                      Fukuoka Ken Fukuoka City Chuo-ku-Kego 2-9-10-201 Japan
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Landline -->
+                <div class="contact-items d-flex align-items-center mb-2">
+                  <div class="footer-contact-icon-small me-3">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="content">
+                    <span class="footer-contact-text">81-90-714-0758</span>
+                  </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="contact-items d-flex align-items-center mb-2">
+                  <div class="footer-contact-icon-small me-3">
+                    <i class="fas fa-mobile-alt"></i>
+                  </div>
+                  <div class="content">
+                    <a href="tel:819029324271" class="footer-contact-text"
+                      >81-90-2932-4271</a
+                    >
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-items d-flex align-items-center">
+                  <div class="footer-contact-icon-small me-3">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="content">
+                    <a
+                      href="mailto:hyderlemon@gmail.com"
+                      class="footer-contact-text"
+                      >hyderlemon@gmail.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Sub-Footer Bar -->
+      <div class="footer-bottom-1">
+        <div class="container text-center">
+          <p class="mb-0">
+            &copy; 2026 BongoTanboTravels. All rights reserved. Designed with
+            Bootstrap 5.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================================================
+       FLOATING BACK-TO-TOP BUTTON
+       Smoothly returns user to the top of the webpage when clicked.
+       ========================================================================== -->
+    <button id="backTopBtn" class="back-to-top" aria-label="Scroll back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ==========================================================================
+       SCRIPTS
+       1. Bootstrap 5.3.3 Bundle (Includes Popper.js for dropdowns & tooltips)
+       2. Custom main.js (Header sticky, carousel, ticker, search, mobile drawer)
+       ========================================================================== -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

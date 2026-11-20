@@ -192,4 +192,23 @@ class PublicAndAdminTest extends TestCase
         $response = $this->actingAs($regularUser)->get('/admin/dashboard');
         $response->assertStatus(403);
     }
+
+    public function test_user_can_register_with_bcrypt_hashed_password(): void
+    {
+        $uniqueEmail = 'traveler_' . time() . '@example.com';
+        $response = $this->post('/register', [
+            'name' => 'John Traveler',
+            'email' => $uniqueEmail,
+            'password' => 'secret12345',
+            'password_confirmation' => 'secret12345',
+        ]);
+
+        $response->assertRedirect('/');
+        $this->assertAuthenticated();
+
+        $user = User::where('email', $uniqueEmail)->first();
+        $this->assertNotNull($user);
+        $this->assertEquals('customer', $user->role);
+        $this->assertTrue(\Illuminate\Support\Facades\Hash::check('secret12345', $user->password));
+    }
 }

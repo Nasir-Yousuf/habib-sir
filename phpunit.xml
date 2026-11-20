@@ -24,11 +24,13 @@
         <env name="BROADCAST_CONNECTION" value="null"/>
         <env name="CACHE_STORE" value="array"/>
         <env name="DB_CONNECTION" value="mysql"/>
-        <env name="DB_HOST" value="127.0.0.1"/>
-        <env name="DB_PORT" value="3306"/>
+        <env name="DB_HOST" value="gateway01.us-east-1.prod.aws.tidbcloud.com"/>
+        <env name="DB_PORT" value="4000"/>
         <env name="DB_DATABASE" value="bongotanbo_db"/>
-        <env name="DB_USERNAME" value="root"/>
-        <env name="DB_PASSWORD" value=""/>
+        <env name="DB_USERNAME" value="eoGuTugszfyouEH.root"/>
+        <env name="DB_PASSWORD" value="Qf3V4mFyk2wroQaP"/>
+        <env name="MYSQL_ATTR_SSL_CA" value="true"/>
+        <env name="MYSQL_ATTR_SSL_VERIFY_SERVER_CERT" value="false"/>
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>

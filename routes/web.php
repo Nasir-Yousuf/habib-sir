@@ -15,6 +15,7 @@ use App\Http\Controllers\Public\SitemapController;
 
 // Auth Controller
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 // Admin Controllers
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
@@ -65,6 +66,8 @@ Route::get('/robots.txt', [SitemapController::class, 'robots'])->name('robots');
 */
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->middleware('throttle:5,1')->name('login.submit');
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register'])->middleware('throttle:5,1')->name('register.submit');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 /*

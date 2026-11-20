@@ -37,9 +37,21 @@
             <li><a href="{{ route('gallery.index') }}">Gallery</a></li>
             <li><a href="{{ route('contact.index') }}">Contact</a></li>
             @auth
-                <li><a href="{{ route('admin.dashboard') }}" class="text-success fw-bold"><i class="fas fa-user-shield me-1"></i> Admin Dashboard</a></li>
+                @if(Auth::user()->role === 'admin')
+                    <li><a href="{{ route('admin.dashboard') }}" class="text-success fw-bold"><i class="fas fa-user-shield me-1"></i> Admin Dashboard</a></li>
+                @else
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                            @csrf
+                            <button type="submit" class="btn btn-link text-danger p-0 fw-bold fs-7 text-decoration-none">
+                                <i class="fas fa-sign-out-alt me-1"></i> Logout ({{ Auth::user()->name }})
+                            </button>
+                        </form>
+                    </li>
+                @endif
             @else
-                <li><a href="{{ route('login') }}"><i class="far fa-user me-1"></i> Admin Login</a></li>
+                <li><a href="{{ route('login') }}"><i class="far fa-user me-1"></i> Sign In</a></li>
+                <li><a href="{{ route('register') }}" class="text-success fw-bold"><i class="fas fa-user-plus me-1"></i> Create Account</a></li>
             @endauth
         </ul>
     </div>

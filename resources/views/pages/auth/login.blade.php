@@ -93,6 +93,11 @@
                 <span>Sign In to Dashboard</span> <i class="fas fa-arrow-right ms-2"></i>
             </button>
 
+            <div class="text-center fs-7 text-muted mb-3">
+                Don't have an account yet? 
+                <a href="{{ route('register') }}" class="text-success fw-bold text-decoration-none">Create Account</a>
+            </div>
+
             <div class="p-3 bg-light rounded-3 text-center fs-8 text-muted border">
                 <i class="fas fa-info-circle text-success me-1"></i> <b>Seed Credentials:</b><br />
                 Email: <code>admin@bongotanbo.com</code> | Password: <code>password</code>

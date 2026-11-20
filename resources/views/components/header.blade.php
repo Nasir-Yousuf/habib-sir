@@ -118,12 +118,24 @@
                         </a>
 
                         @auth
-                            <a href="{{ route('admin.dashboard') }}" class="login-btn d-none d-sm-inline-flex" title="Admin Dashboard">
-                                <i class="fas fa-tachometer-alt me-1"></i> Admin
-                            </a>
+                            @if(Auth::user()->role === 'admin')
+                                <a href="{{ route('admin.dashboard') }}" class="login-btn d-none d-sm-inline-flex" title="Admin Dashboard">
+                                    <i class="fas fa-tachometer-alt me-1"></i> Admin
+                                </a>
+                            @else
+                                <form action="{{ route('logout') }}" method="POST" class="d-none d-sm-inline-flex">
+                                    @csrf
+                                    <button type="submit" class="login-btn border-0" title="Logout">
+                                        <i class="fas fa-sign-out-alt me-1"></i> Logout ({{ Str::limit(Auth::user()->name, 8) }})
+                                    </button>
+                                </form>
+                            @endif
                         @else
-                            <a href="{{ route('login') }}" class="login-btn d-none d-sm-inline-flex" title="Admin Login">
+                            <a href="{{ route('login') }}" class="login-btn d-none d-sm-inline-flex" title="User Sign In">
                                 <i class="far fa-user me-1"></i> Login
+                            </a>
+                            <a href="{{ route('register') }}" class="btn btn-sm btn-outline-success d-none d-md-inline-flex rounded-pill px-3" style="font-size: 13px;" title="Register Account">
+                                <i class="fas fa-user-plus me-1"></i> Register
                             </a>
                         @endauth
 

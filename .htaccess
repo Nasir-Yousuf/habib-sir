@@ -1,0 +1,24 @@
+# ==============================================================================
+# BONGO TANBO TRAVELS - ROOT APACHE CONFIGURATION (SHARED HOSTING / CPANEL)
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block access to hidden directories and sensitive files
+    RewriteRule ^(\.git|\.env|composer\.(json|lock)|package(-lock)?\.json|phpunit\.xml|vite\.config\.js) - [F,L]
+    RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|tests)/ - [F,L]
+
+    # Rewrite all traffic into the public/ web root
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Disable directory browsing
+Options -Indexes
+
+# Protect .env and sensitive files explicitly
+<FilesMatch "^\.env|composer\.(json|lock)|package(-lock)?\.json|\.git">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

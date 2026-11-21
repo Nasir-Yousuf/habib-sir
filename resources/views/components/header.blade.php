@@ -123,10 +123,13 @@
                                     <i class="fas fa-tachometer-alt me-1"></i> Admin
                                 </a>
                             @else
+                                <a href="{{ route('my-bookings') }}" class="login-btn d-none d-sm-inline-flex" title="My Bookings">
+                                    <i class="fas fa-suitcase-rolling me-1"></i> My Trips
+                                </a>
                                 <form action="{{ route('logout') }}" method="POST" class="d-none d-sm-inline-flex">
                                     @csrf
-                                    <button type="submit" class="login-btn border-0" title="Logout">
-                                        <i class="fas fa-sign-out-alt me-1"></i> Logout ({{ Str::limit(Auth::user()->name, 8) }})
+                                    <button type="submit" class="btn btn-sm btn-outline-danger rounded-pill px-3 py-1" style="font-size: 13px;" title="Logout">
+                                        <i class="fas fa-sign-out-alt me-1"></i> Logout
                                     </button>
                                 </form>
                             @endif

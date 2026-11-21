@@ -211,4 +211,54 @@ class PublicAndAdminTest extends TestCase
         $this->assertEquals('customer', $user->role);
         $this->assertTrue(\Illuminate\Support\Facades\Hash::check('secret12345', $user->password));
     }
+
+    public function test_guest_is_redirected_from_my_bookings_dashboard(): void
+    {
+        $response = $this->get('/my-bookings');
+        $response->assertRedirect('/login');
+    }
+
+    public function test_authenticated_traveler_can_view_my_bookings_and_download_voucher(): void
+    {
+        $user = User::factory()->create([
+            'role' => 'customer',
+        ]);
+
+        $tour = Tour::first();
+
+        $booking = \App\Models\Booking::create([
+            'user_id' => $user->id,
+            'tour_id' => $tour ? $tour->id : null,
+            'booking_reference' => 'BTB-TEST-' . rand(1000, 9999),
+            'customer_name' => $user->name,
+            'customer_email' => $user->email,
+            'customer_phone' => '+8801700112233',
+            'departure_date' => now()->addDays(20)->format('Y-m-d'),
+            'adults_count' => 2,
+            'children_count' => 0,
+            'status' => 'confirmed',
+        ]);
+
+        // Access dashboard
+        $response = $this->actingAs($user)->get('/my-bookings');
+        $response->assertStatus(200);
+        $response->assertSee($booking->booking_reference);
+        $response->assertSee('My Bookings');
+
+        // Access voucher
+        $voucherResponse = $this->actingAs($user)->get('/bookings/' . $booking->booking_reference . '/voucher');
+        $voucherResponse->assertStatus(200);
+        $voucherResponse->assertSee($booking->booking_reference);
+        $voucherResponse->assertSee('Tour Voucher');
+        $voucherResponse->assertSee('Print / Save as PDF');
+    }
+
+    public function test_whatsapp_floating_pill_is_rendered_on_pages(): void
+    {
+        $response = $this->get('/');
+        $response->assertStatus(200);
+        $response->assertSee('floating-whatsapp-btn');
+        $response->assertSee('wa.me');
+        $response->assertSee('+8801577509112');
+    }
 }

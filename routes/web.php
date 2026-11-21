@@ -54,6 +54,10 @@ Route::post('/contact', [ContactController::class, 'store'])->middleware('thrott
 
 // Inquiries / Bookings
 Route::post('/bookings', [BookingController::class, 'store'])->middleware('throttle:5,1')->name('bookings.store');
+Route::middleware('auth')->group(function () {
+    Route::get('/my-bookings', [BookingController::class, 'myBookings'])->name('my-bookings');
+    Route::get('/bookings/{reference}/voucher', [BookingController::class, 'voucher'])->name('bookings.voucher');
+});
 
 // SEO: Sitemap & Robots
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');

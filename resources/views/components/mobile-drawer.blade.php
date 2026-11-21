@@ -40,6 +40,7 @@
                 @if(Auth::user()->role === 'admin')
                     <li><a href="{{ route('admin.dashboard') }}" class="text-success fw-bold"><i class="fas fa-user-shield me-1"></i> Admin Dashboard</a></li>
                 @else
+                    <li><a href="{{ route('my-bookings') }}" class="text-success fw-bold"><i class="fas fa-suitcase-rolling me-1"></i> My Bookings & Trips</a></li>
                     <li>
                         <form action="{{ route('logout') }}" method="POST" class="d-inline">
                             @csrf

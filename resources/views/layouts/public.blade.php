@@ -59,6 +59,9 @@
     <!-- Mobile Drawer -->
     @include('components.mobile-drawer')
 
+    <!-- WhatsApp Floating Action Pill -->
+    @include('components.whatsapp-pill')
+
     <!-- Scripts -->
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>

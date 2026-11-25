@@ -261,4 +261,89 @@ class PublicAndAdminTest extends TestCase
         $response->assertSee('wa.me');
         $response->assertSee('+8801577509112');
     }
+
+    public function test_admin_responsive_pages_and_modals_load_properly(): void
+    {
+        $admin = User::where('role', 'admin')->first() ?? User::factory()->create(['role' => 'admin']);
+
+        $this->actingAs($admin)->get('/admin/dashboard')
+            ->assertStatus(200)
+            ->assertSee('Executive Analytics');
+
+        $this->actingAs($admin)->get('/admin/bookings')
+            ->assertStatus(200)
+            ->assertSee('bookingDetailModal')
+            ->assertSee('Export CSV');
+
+        $this->actingAs($admin)->get('/admin/tours')
+            ->assertStatus(200)
+            ->assertSee('Tour Packages Catalog');
+
+        $this->actingAs($admin)->get('/admin/destinations')
+            ->assertStatus(200)
+            ->assertSee('editDestModal');
+
+        $this->actingAs($admin)->get('/admin/categories')
+            ->assertStatus(200)
+            ->assertSee('editCatModal');
+
+        $this->actingAs($admin)->get('/admin/messages')
+            ->assertStatus(200)
+            ->assertSee('Contact Inquiries Inbox');
+    }
+
+    public function test_admin_can_export_bookings_csv(): void
+    {
+        $admin = User::where('role', 'admin')->first() ?? User::factory()->create(['role' => 'admin']);
+
+        $response = $this->actingAs($admin)->get('/admin/bookings/export');
+        $response->assertStatus(200);
+        $this->assertStringContainsString('text/csv', $response->headers->get('Content-Type'));
+    }
+
+    public function test_admin_can_update_destination_and_category(): void
+    {
+        $admin = User::where('role', 'admin')->first() ?? User::factory()->create(['role' => 'admin']);
+
+        $dest = Destination::create([
+            'name' => 'Temp Dest ' . rand(100, 999),
+            'slug' => 'temp-dest-' . time(),
+            'country' => 'Bangladesh',
+            'is_featured' => false,
+        ]);
+
+        $destUpdate = $this->actingAs($admin)->put('/admin/destinations/' . $dest->id, [
+            'name' => $dest->name . ' Updated',
+            'country' => 'Bangladesh',
+            'tagline' => 'Updated Tagline',
+            'is_featured' => '1',
+        ]);
+        $destUpdate->assertRedirect();
+        $this->assertDatabaseHas('destinations', ['id' => $dest->id, 'tagline' => 'Updated Tagline']);
+        $dest->delete();
+
+        $cat = \App\Models\Category::create([
+            'name' => 'Temp Cat ' . rand(100, 999),
+            'slug' => 'temp-cat-' . time(),
+            'sort_order' => 1,
+            'is_active' => true,
+        ]);
+
+        $catUpdate = $this->actingAs($admin)->put('/admin/categories/' . $cat->id, [
+            'name' => $cat->name . ' Updated',
+            'sort_order' => 5,
+            'is_active' => '1',
+        ]);
+        $catUpdate->assertRedirect();
+        $this->assertDatabaseHas('categories', ['id' => $cat->id, 'sort_order' => 5]);
+        $cat->delete();
+    }
+
+    public function test_public_cached_routes_and_sitemap_load_cleanly(): void
+    {
+        $this->get('/gallery')->assertStatus(200);
+        $this->get('/blog')->assertStatus(200);
+        $sitemap = $this->get('/sitemap.xml')->assertStatus(200);
+        $this->assertStringContainsString('text/xml', $sitemap->headers->get('Content-Type'));
+    }
 }

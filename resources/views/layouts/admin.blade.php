@@ -159,6 +159,21 @@
             transition: all 0.3s ease;
         }
 
+        /* Mobile Card & Touch Target Helpers */
+        .admin-mobile-card {
+            background: #ffffff;
+            border: 1px solid #edf2f7;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            padding: 16px;
+        }
+        .pagination {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4px;
+            margin-bottom: 0;
+        }
+
         /* ==========================================================================
            MOBILE & TABLET BREAKPOINTS (< 992px)
            ========================================================================== */
@@ -191,12 +206,26 @@
 
             .admin-header {
                 height: 60px;
-                padding-left: 16px !important;
-                padding-right: 16px !important;
+                padding-left: 14px !important;
+                padding-right: 14px !important;
             }
 
             .admin-content {
-                padding: 16px !important;
+                padding: 14px !important;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .admin-content .form-control-sm,
+            .admin-content .form-select-sm {
+                min-height: 38px;
+                font-size: 14px;
+            }
+            .admin-content .btn-touch {
+                min-height: 38px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     </style>
@@ -246,12 +275,20 @@
                 </li>
                 <li>
                     <a href="{{ route('admin.bookings.index') }}" class="nav-link {{ request()->routeIs('admin.bookings.*') ? 'active' : '' }}">
-                        <i class="fas fa-calendar-check"></i> <span>Bookings</span>
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Bookings</span>
+                        @if(($pendingBookingsCount ?? 0) > 0)
+                            <span class="badge bg-warning text-dark rounded-pill ms-auto" style="font-size: 11px;">{{ $pendingBookingsCount }}</span>
+                        @endif
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('admin.messages.index') }}" class="nav-link {{ request()->routeIs('admin.messages.*') ? 'active' : '' }}">
-                        <i class="fas fa-envelope"></i> <span>Messages</span>
+                        <i class="fas fa-envelope"></i>
+                        <span>Messages</span>
+                        @if(($unreadMessagesCount ?? 0) > 0)
+                            <span class="badge bg-danger rounded-pill ms-auto" style="font-size: 11px;">{{ $unreadMessagesCount }}</span>
+                        @endif
                     </a>
                 </li>
             </ul>
@@ -286,14 +323,14 @@
         <!-- Main Workspace -->
         <div class="admin-main">
             <!-- Topbar Header -->
-            <header class="admin-header d-flex justify-content-between align-items-center px-4">
-                <div class="d-flex align-items-center gap-2">
+            <header class="admin-header d-flex justify-content-between align-items-center px-3 px-lg-4 gap-2">
+                <div class="d-flex align-items-center gap-2 min-w-0 flex-grow-1">
                     <!-- Mobile Hamburger Toggle Button -->
-                    <button type="button" class="btn btn-light d-lg-none p-2 border rounded-3" id="adminSidebarToggle" aria-label="Open Navigation">
+                    <button type="button" class="btn btn-light d-lg-none p-2 border rounded-3 flex-shrink-0" id="adminSidebarToggle" aria-label="Open Navigation">
                         <i class="fas fa-bars text-dark"></i>
                     </button>
 
-                    <h1 class="fw-bold fs-5 text-dark mb-0 text-truncate" style="max-width: 250px;">
+                    <h1 class="fw-bold fs-6 fs-md-5 text-dark mb-0 text-truncate">
                         @yield('header_title', 'Dashboard Overview')
                     </h1>
                 </div>

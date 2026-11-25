@@ -100,7 +100,7 @@
 
             <!-- Toggles -->
             <div class="col-12">
-                <div class="d-flex gap-4">
+                <div class="d-flex flex-wrap gap-3 gap-md-4">
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" name="is_active" id="isActive" value="1" {{ $tour->is_active ? 'checked' : '' }}>
                         <label class="form-check-label fw-bold fs-7 text-dark" for="isActive">Publish Tour (Active Publicly)</label>
@@ -182,15 +182,24 @@
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("itineraryContainer");
     const addBtn = document.getElementById("addItineraryBtn");
-    let dayCount = container.querySelectorAll(".itinerary-item").length;
+    function reindexItineraries() {
+        const items = container.querySelectorAll(".itinerary-item");
+        items.forEach((item, idx) => {
+            const label = item.querySelector(".day-number-label");
+            if (label) label.textContent = "Day " + (idx + 1);
+            item.querySelectorAll("input, textarea").forEach(input => {
+                input.name = input.name.replace(/itineraries\[\d+\]/, `itineraries[${idx}]`);
+            });
+        });
+    }
 
     addBtn.addEventListener("click", function () {
-        dayCount++;
-        const index = dayCount - 1;
+        const index = container.querySelectorAll(".itinerary-item").length;
+        const dayNum = index + 1;
         const html = `
             <div class="p-3 border rounded-3 bg-light itinerary-item">
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="fw-bold text-success fs-7 day-number-label">Day ${dayCount}</span>
+                    <span class="fw-bold text-success fs-7 day-number-label">Day ${dayNum}</span>
                     <button type="button" class="btn btn-sm btn-outline-danger remove-day-btn py-0 px-2">&times;</button>
                 </div>
                 <div class="row g-2">
@@ -215,6 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
     container.addEventListener("click", function (e) {
         if (e.target.classList.contains("remove-day-btn")) {
             e.target.closest(".itinerary-item").remove();
+            reindexItineraries();
         }
     });
 });

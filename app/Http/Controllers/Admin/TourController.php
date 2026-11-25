@@ -85,6 +85,8 @@ class TourController extends Controller
         }
 
         Cache::forget('home_featured_tours');
+        Cache::forget('destinations_with_count');
+        Cache::forget('sitemap_xml');
 
         return redirect()->route('admin.tours.index')->with('success', 'Tour package created successfully!');
     }
@@ -145,6 +147,10 @@ class TourController extends Controller
         }
 
         Cache::forget('home_featured_tours');
+        Cache::forget('destinations_with_count');
+        Cache::forget('sitemap_xml');
+        Cache::forget("tour_detail_{$tour->slug}");
+        Cache::forget("tour_related_{$tour->id}");
 
         return redirect()->route('admin.tours.index')->with('success', 'Tour updated successfully!');
     }
@@ -152,8 +158,15 @@ class TourController extends Controller
     public function destroy($id)
     {
         $tour = Tour::findOrFail($id);
+        $slug = $tour->slug;
+        $tourId = $tour->id;
         $tour->delete();
+
         Cache::forget('home_featured_tours');
+        Cache::forget('destinations_with_count');
+        Cache::forget('sitemap_xml');
+        Cache::forget("tour_detail_{$slug}");
+        Cache::forget("tour_related_{$tourId}");
 
         return redirect()->route('admin.tours.index')->with('success', 'Tour deleted successfully!');
     }

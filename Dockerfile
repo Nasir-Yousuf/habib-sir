@@ -1,6 +1,6 @@
 FROM php:8.2-fpm-alpine
 
-# Install system dependencies & PHP extensions
+# Install system dependencies & PHP extensions (including OPcache for speed)
 RUN apk add --no-cache \
     nginx \
     nodejs \
@@ -13,7 +13,19 @@ RUN apk add --no-cache \
     unzip \
     oniguruma-dev \
     libzip-dev \
-    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd zip
+    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd zip opcache
+
+# Configure PHP OPcache for high-speed production execution
+RUN { \
+    echo 'opcache.enable=1'; \
+    echo 'opcache.enable_cli=1'; \
+    echo 'opcache.memory_consumption=128'; \
+    echo 'opcache.interned_strings_buffer=16'; \
+    echo 'opcache.max_accelerated_files=10000'; \
+    echo 'opcache.validate_timestamps=0'; \
+    echo 'opcache.save_comments=1'; \
+    echo 'opcache.fast_shutdown=1'; \
+} > /usr/local/etc/php/conf.d/opcache-prod.ini
 
 # Get latest Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -27,8 +39,8 @@ COPY . .
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-# Install NPM dependencies & build production frontend assets
-RUN npm ci && npm run build
+# Install NPM dependencies, build production frontend assets, and prune node_modules
+RUN npm ci && npm run build && rm -rf node_modules /root/.npm
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \

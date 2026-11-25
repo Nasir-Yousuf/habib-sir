@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\BookingStoreRequest;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 
 class BookingController extends Controller
@@ -20,6 +21,7 @@ class BookingController extends Controller
         }
 
         $booking = Booking::create($validated);
+        Cache::forget('admin_sidebar_counts');
 
         return redirect()->back()->with('success', 'Your booking inquiry (' . $booking->booking_reference . ') has been successfully received! Our trip advisor will contact you within 24 hours to confirm details.');
     }

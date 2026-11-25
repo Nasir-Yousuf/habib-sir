@@ -28,7 +28,6 @@
                         <i class="fas fa-check-circle me-1"></i> Verified Traveler
                     </span>
                 </div>
-
                 <div class="d-flex flex-column gap-2 text-muted small">
                     <div class="d-flex justify-content-between py-1">
                         <span>Total Bookings:</span>
@@ -149,4 +148,4 @@
         </div>
     </div>
 </div>
-@endsection
+<!-- @endsection -->

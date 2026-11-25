@@ -199,7 +199,7 @@
 ========================================================================== -->
 <section class="about-section" id="about-section">
     <div class="about-shape-bg d-none d-lg-block">
-        <img src="{{ asset('assets/images/about-shape.webp') }}" alt="Background shape">
+        <img src="{{ asset('assets/images/about-shape.webp') }}" alt="Background shape" loading="lazy" decoding="async">
     </div>
 
     <div class="container">
@@ -207,7 +207,7 @@
             <!-- Left Column: Photo & Experience Counter -->
             <div class="col-lg-5">
                 <div class="about-image-wrapper">
-                    <img src="{{ asset('assets/images/about-img.webp') }}" alt="Bongo Tanbo Travels Journey" class="main-about-img">
+                    <img src="{{ asset('assets/images/about-img.webp') }}" alt="Bongo Tanbo Travels Journey" class="main-about-img" loading="lazy" decoding="async">
                     <div class="about-experience-box">
                         <h2><span class="counter-value" data-count="12">12</span>+</h2>
                         <p>Years of Experience</p>
@@ -265,7 +265,7 @@
                             <span>Read More</span> <i class="fas fa-long-arrow-alt-right ms-1"></i>
                         </a>
                         <div class="client-group">
-                            <img src="{{ asset('assets/images/client-avatars.webp') }}" alt="Satisfied Travelers" width="135">
+                            <img src="{{ asset('assets/images/client-avatars.webp') }}" alt="Satisfied Travelers" width="135" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -378,7 +378,7 @@
                     <div class="tour-content">
                         <h3>Explore <br />Destinations <br />Save More Every Trip</h3>
                     </div>
-                    <div class="percent-image"><img src="{{ asset('assets/images/badge-1.webp') }}" alt="Special Discount Badge"></div>
+                    <div class="percent-image"><img src="{{ asset('assets/images/badge-1.webp') }}" alt="Special Discount Badge" loading="lazy" decoding="async"></div>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-6 col-md-6">
@@ -386,7 +386,7 @@
                     <div class="tour-content">
                         <h3>Plan Ahead, <br />Travel Smart <br />Save Big On Vacations</h3>
                     </div>
-                    <div class="percent-image"><img src="{{ asset('assets/images/badge-2.webp') }}" alt="Special Discount Badge"></div>
+                    <div class="percent-image"><img src="{{ asset('assets/images/badge-2.webp') }}" alt="Special Discount Badge" loading="lazy" decoding="async"></div>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-6 col-md-6">
@@ -394,7 +394,7 @@
                     <div class="tour-content">
                         <h3>Experience <br />The Best Trips <br />At Best Rates</h3>
                     </div>
-                    <div class="percent-image"><img src="{{ asset('assets/images/badge-3.webp') }}" alt="Special Discount Badge"></div>
+                    <div class="percent-image"><img src="{{ asset('assets/images/badge-3.webp') }}" alt="Special Discount Badge" loading="lazy" decoding="async"></div>
                 </div>
             </div>
         </div>
@@ -443,9 +443,9 @@
             <a href="#heroBookingForm" class="theme-btn">
                 <span>Book Now</span> <i class="fas fa-long-arrow-alt-right ms-1"></i>
             </a>
-            <div class="discount-shape"><img src="{{ asset('assets/images/discount-shape.webp') }}" alt="Discount Shape"></div>
-            <div class="bag-shape"><img src="{{ asset('assets/images/bag-shape.webp') }}" alt="Suitcase Shape"></div>
-            <div class="plane-shape"><img src="{{ asset('assets/images/plane-shape.png') }}" alt="Airplane Shape"></div>
+            <div class="discount-shape"><img src="{{ asset('assets/images/discount-shape.webp') }}" alt="Discount Shape" loading="lazy" decoding="async"></div>
+            <div class="bag-shape"><img src="{{ asset('assets/images/bag-shape.webp') }}" alt="Suitcase Shape" loading="lazy" decoding="async"></div>
+            <div class="plane-shape"><img src="{{ asset('assets/images/plane-shape.png') }}" alt="Airplane Shape" loading="lazy" decoding="async"></div>
         </div>
     </div>
 </section>

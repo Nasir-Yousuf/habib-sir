@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 
 class CategoryController extends Controller
@@ -29,6 +30,8 @@ class CategoryController extends Controller
         $validated['is_active'] = $request->boolean('is_active', true);
 
         Category::create($validated);
+        Cache::forget('all_categories');
+        Cache::forget('home_featured_tours');
 
         return redirect()->back()->with('success', 'Category created successfully!');
     }
@@ -49,6 +52,8 @@ class CategoryController extends Controller
         $validated['is_active'] = $request->boolean('is_active');
 
         $category->update($validated);
+        Cache::forget('all_categories');
+        Cache::forget('home_featured_tours');
 
         return redirect()->back()->with('success', 'Category updated successfully!');
     }
@@ -57,6 +62,8 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
         $category->delete();
+        Cache::forget('all_categories');
+        Cache::forget('home_featured_tours');
 
         return redirect()->back()->with('success', 'Category deleted successfully!');
     }

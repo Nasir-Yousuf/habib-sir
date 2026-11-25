@@ -94,6 +94,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
     // Booking Inquiries
     Route::get('/bookings', [AdminBookingController::class, 'index'])->name('bookings.index');
+    Route::get('/bookings/export', [AdminBookingController::class, 'export'])->name('bookings.export');
     Route::patch('/bookings/{id}', [AdminBookingController::class, 'updateStatus'])->name('bookings.updateStatus');
     Route::delete('/bookings/{id}', [AdminBookingController::class, 'destroy'])->name('bookings.destroy');
 

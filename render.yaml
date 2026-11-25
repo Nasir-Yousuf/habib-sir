@@ -40,6 +40,6 @@ services:
       - key: MYSQL_ATTR_SSL_VERIFY_SERVER_CERT
         value: "false"
       - key: SESSION_DRIVER
-        value: database
+        value: cookie
       - key: CACHE_STORE
-        value: database
+        value: file

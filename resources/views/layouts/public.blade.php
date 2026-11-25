@@ -22,6 +22,11 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/images/logo.webp') }}" type="image/x-icon">
 
+    <!-- Preload critical CSS & Hero image hints -->
+    @if(request()->routeIs('home'))
+        <link rel="preload" as="image" href="{{ asset('assets/images/sundorbon.png') }}" fetchpriority="high">
+    @endif
+
     <!-- CSS Frameworks & Google Fonts -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -62,9 +67,9 @@
     <!-- WhatsApp Floating Action Pill -->
     @include('components.whatsapp-pill')
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <!-- Scripts (Deferred for non-blocking FCP) -->
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}" defer></script>
     @yield('extra_js')
 </body>
 </html>

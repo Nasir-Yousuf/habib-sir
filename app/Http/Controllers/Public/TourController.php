@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Destination;
 use App\Models\Tour;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class TourController extends Controller
 {
@@ -70,27 +71,36 @@ class TourController extends Controller
         }
 
         $tours = $query->paginate(12)->withQueryString();
-        $categories = Category::where('is_active', true)->orderBy('sort_order')->get();
-        $destinations = Destination::all();
+        $categories = Cache::remember('all_categories', 3600, function () {
+            return Category::where('is_active', true)->orderBy('sort_order')->get();
+        });
+        $destinations = Cache::remember('public_destinations_all', 3600, function () {
+            return Destination::all();
+        });
 
         return view('pages.public.tours.index', compact('tours', 'categories', 'destinations'));
     }
 
     public function show($slug)
     {
-        $tour = Tour::with(['category', 'destination', 'itineraries', 'images'])
-            ->where('slug', $slug)
-            ->where('is_active', true)
-            ->firstOrFail();
+        $tour = Cache::remember("tour_detail_{$slug}", 1800, function () use ($slug) {
+            return Tour::with(['category', 'destination', 'itineraries', 'images'])
+                ->where('slug', $slug)
+                ->where('is_active', true)
+                ->firstOrFail();
+        });
 
-        $relatedTours = Tour::where('id', '!=', $tour->id)
-            ->where(function ($q) use ($tour) {
-                $q->where('category_id', $tour->category_id)
-                  ->orWhere('destination_id', $tour->destination_id);
-            })
-            ->where('is_active', true)
-            ->take(3)
-            ->get();
+        $relatedTours = Cache::remember("tour_related_{$tour->id}", 1800, function () use ($tour) {
+            return Tour::with(['category', 'destination'])
+                ->where('id', '!=', $tour->id)
+                ->where(function ($q) use ($tour) {
+                    $q->where('category_id', $tour->category_id)
+                      ->orWhere('destination_id', $tour->destination_id);
+                })
+                ->where('is_active', true)
+                ->take(3)
+                ->get();
+        });
 
         return view('pages.public.tours.show', compact('tour', 'relatedTours'));
     }
